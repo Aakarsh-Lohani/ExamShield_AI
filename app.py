@@ -14,6 +14,10 @@ def main():
     menu = ["Register", "Test", "Evaluator Results","Practice"]
     choice = st.sidebar.selectbox("Menu", menu)
 
+
+    if 'clicks' not in st.session_state:
+        st.session_state.clicks = 0
+
     if choice == "Register":
         st.header("Candidate registration")
         captured_image = st.camera_input("Take a picture , Face should be clearly visible")
@@ -38,24 +42,19 @@ def main():
         ''')
 
         if st.button("Start Test"):
-            #Request full-screen mode.
-            components.html(fullScr1,height=150)
-            st.write("Full screen mode activated!")
+            st.session_state.clicks += 1
+            test_page_url =f"http://localhost:8501/Test?session={st.session_state.clicks}"
+            components.html(
+                f"""
+                <script type="text/javascript">
+                    window.open("{test_page_url}","_blank");
+                </script>
+                """,
+                height=0
+            )
 
-            st.success("Test Started! Please use the 'Show Logs' button if you want to view monitoring details.")
-            show_logs= st.button("Show Logs")
-
-            if show_logs:
-                st.subheader("Logs")
-                log_cols = st.columns(2)
-                with log_cols[0]:
-                    st.write("**Video Stream:**")
-                    # Insert a video stream component (using streamlit-webrtc)
-                    webrtc_streamer(key="video_logs", video_transformer_factory=VideoTransformer)
-                with log_cols[1]:
-                    st.write("**Activity Logs:**")
-                    st.text("Suspicious activity logs will be displayed here...")
-                st.markdown("---")  # divider
+            # components.html(fullScr1,height=150)
+            
 
 if __name__=="__main__":
     main()

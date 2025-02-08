@@ -11,7 +11,7 @@ def register_face(image_bytes):
 
 def main():
     st.title("ExamShield AI")
-    menu = ["Register", "Test", "Evaluator","Practice"]
+    menu = ["Register", "Test", "Evaluator Results","Practice"]
     choice = st.sidebar.selectbox("Menu", menu)
 
     if choice == "Register":

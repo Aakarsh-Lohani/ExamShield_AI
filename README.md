@@ -13,9 +13,12 @@
 # Features
 1. **User Registration & Face Enrollment**:
 Capture candidate images using the webcam for registration and later verify identity during the test.
+![Alt Text](https://github.com/Aakarsh-Lohani/ExamShield_AI/blob/main/Screenshot%202025-02-17%20103152.png)
 
 2. **Real-Time Proctoring & Cheating Detection**:
 Monitor candidate behavior with live camera feeds to detect suspicious activities, such as off-screen glances, multiple faces, abnormal keystroke patterns, and head pose deviations.
+![Alt Text](https://github.com/Aakarsh-Lohani/ExamShield_AI/blob/main/Screenshot%202025-02-17%20103512.png)
+
 
 3. **Integrated Code Evaluation**:
 Provide a built-in code editor with real-time code execution and automated assessment based on expected outputs.
@@ -52,6 +55,7 @@ Provide a built-in code editor with real-time code execution and automated asses
   - **Behavioral Analysis**: Detect off-screen glances, multiple faces, and unusual head poses.
   - **Keystroke Monitoring**: Track typing patterns and speed to identify anomalies.
   - **Live Video Logging**: Monitor live camera feeds to generate logs and alerts for suspicious behavior.
+![Alt Text](https://github.com/Aakarsh-Lohani/ExamShield_AI/blob/main/Screenshot%202025-02-17%20103827.png)
 
 
 # Setup & Usage

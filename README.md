@@ -79,10 +79,6 @@ The project is set up for continuous deployment to Azure using GitHub Actions. E
 3. Expand support for multiple programming languages and code evaluation methods.
 4. Develop comprehensive reporting and analytics dashboards for exam review.
 
-# License
-This project is licensed under the MIT License – see the LICENSE file for details.
-
-
 
 
 
